@@ -1,91 +1,59 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 
 export default function HomeBanner() {
-  const [email, setEmail] = useState("");
-
   return (
-    <div className="min-h-screen flex items-center justify-center bg-black px-4">
-      <div className="w-full max-w-[420px] bg-[black] rounded-[12px] p-8 flex flex-col gap-6">
-        
-        <div className="flex items-center justify-center gap-2 ">
-          <Image className="bg-white rounded-[50px]"
-            src="https://cdn-icons-png.flaticon.com/128/10096/10096445.png"
-            alt="Spotify"
-            width={36}
-            height={36}
-          />
-          <h1 className="text-[26px] font-bold text-white"></h1>
-        </div>
+    <div className="min-h-screen flex items-center justify-center bg-[#858585] px-4">
+      <div className=" bg-white  px-40 py-20 flex flex-col gap-4 shadow-sm">
 
-        <h2 className="text-[52px] font-bold text-white text-center whitespace-nowrap">
-          Welcome back
-        </h2>
+        <h1 className="text-[30px]  text-black text-center mb-2 font-serif italic">
+          Welcome back.
+        </h1>
 
-        <div className="flex flex-col gap-3">
-          <label className="text-sm text-white">Email</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full px-4 py-3 text-sm bg-transparent border border-gray-600 rounded-md text-white outline-none focus:border-white"
-          />
-        </div>
-
-        <button className="w-full bg-[#1DB954] text-black py-3 rounded-full font-semibold hover:scale-[1.02] transition">
-          Continue
+        <button className="flex items-center justify-center gap-3 border border-black rounded-full py-3 text-sm text-black hover:border-black transition">
+          <Image src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png" alt="Google" width={18} height={18} />
+          Sign in with Google
         </button>
 
-        <div className="flex items-center gap-3 justify-center">
-          <span className="text-xs text-gray-400 uppercase">or</span>
-        </div>
+        <button className="flex items-center justify-center gap-3 border border-black rounded-full py-3 text-sm text-black hover:border-black transition">
+          <Image src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook" width={18} height={18} />
+          Sign in with Facebook
+        </button>
 
-        <div className="flex flex-col gap-3">
-          <button className="flex items-center justify-center gap-3 border border-gray-600 rounded-full py-3 text-white hover:border-white">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"
-              alt="Google"
-              width={18}
-              height={18}
-            />
-            Continue with Google
-          </button>
+        <button className="flex items-center justify-center gap-3 border border-black rounded-full py-3 text-sm text-black hover:border-black transition">
+          <Image src="https://cdn-icons-png.flaticon.com/512/0/747.png" alt="Apple" width={18} height={18} />
+          Sign in with Apple
+        </button>
 
-          <button className="flex items-center justify-center gap-3 border border-gray-600 rounded-full py-3 text-white hover:border-white">
-            <Image
-              src="https://cdn-icons-png.flaticon.com/128/15047/15047435.png"
-              alt="Facebook"
-              width={18}
-              height={18}
-            />
-            Continue with Facebook
-          </button>
+        <button className="flex items-center justify-center gap-3 border border-black rounded-full py-3 text-sm text-black hover:border-black transition">
+          <Image src="https://cdn-icons-png.flaticon.com/128/5968/5968958.png" alt="X" width={18} height={18} />
+          Sign in with X
+        </button>
 
-          <button className="flex items-center justify-center gap-3 border border-gray-600 rounded-full py-3 text-white hover:border-white">
-            <Image className=""
-              src="https://cdn-icons-png.flaticon.com/128/179/179309.png"
-              alt="Apple"
-              width={20}
-              height={20}
-            />
-            Continue with Apple
-          </button>
-        </div>
+        <button className="flex items-center justify-center gap-3 border border-black rounded-full py-3 text-sm text-black hover:border-black transition">
+          <Image src="https://cdn-icons-png.flaticon.com/128/2099/2099100.png" alt="Email" width={18} height={18} />
+          Sign in with email
+        </button>
 
-        <div className="flex flex-col gap-[40px]">
-          <p className="text-sm text-gray-400 text-center">
-            Don’t have an account? <br />
-            <span className="text-white underline cursor-pointer">
-              Sign up
-            </span>
+        <label className="flex items-center justify-center gap-2 text-xs text-gray-600 mt-1 text-[15px]">
+          <input  type="checkbox" className="accent-black w-[40px]" />
+          Remember me for faster sign in
+        </label>
+
+        <div className="text-xs text-gray-500 text-center mt-4 space-y-2">
+          <p>
+            No account? <span className="text-black underline cursor-pointer">Create one</span>
           </p>
-
-          <p className="text-[11px] text-gray-500 text-center leading-relaxed">
-            This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+          <p>
+            Forgot email or trouble signing in? <span className="text-black underline cursor-pointer">Get help.</span>
           </p>
         </div>
+
+        <p className="text-[10px] text-gray-400 text-center leading-relaxed mt-3">
+          By clicking "Sign in", you accept Medium's Terms of Service and Privacy Policy
+        </p>
 
       </div>
     </div>
